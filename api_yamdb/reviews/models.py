@@ -14,7 +14,10 @@ class User(AbstractUser):
         (ADMIN, 'Admin'),
     )
 
-    email = models.EmailField(unique=True, max_length=254)
+    email = models.EmailField(
+        unique=True,
+        max_length=254
+    )
     bio = models.TextField(
         'Биография',
         blank=True,
